@@ -5,7 +5,7 @@
 
 
    <application
-        android:label="work_project"
+        android:label="musicx"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

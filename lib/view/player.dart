@@ -14,7 +14,7 @@ class Player extends StatelessWidget {
   Widget build(BuildContext context) {
     var controller = Get.find<PlayerController>();
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 215, 127, 34),
+      backgroundColor: Color.fromARGB(255, 58, 32, 1),
       appBar: AppBar(),
       body: Padding(
           padding: const EdgeInsets.all(8.0),

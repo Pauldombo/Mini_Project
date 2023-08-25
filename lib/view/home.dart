@@ -14,8 +14,6 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var controller = Get.put(PlayerController());
-    const bottomNavigationBarItem =
-        BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home');
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -78,9 +76,6 @@ class Home extends StatelessWidget {
               "musicx",
               style: ourstyle(family: bold, size: 18),
             ),
-          ),
-          bottomNavigationBar: _CustomNavBar(
-            bottomNavigationBarItem: bottomNavigationBarItem,
           ),
           body: FutureBuilder<List<SongModel>>(
             future: controller.audioQuery.querySongs(
@@ -160,38 +155,12 @@ class Home extends StatelessWidget {
 }
 
 class _CustomNavBar extends StatelessWidget {
-  const _CustomNavBar({
-    required this.bottomNavigationBarItem,
-  });
-
-  final BottomNavigationBarItem bottomNavigationBarItem;
+  const _CustomNavBar();
 
   @override
-  Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      type: BottomNavigationBarType.fixed,
-      backgroundColor:
-          const Color.fromARGB(118, 158, 107, 117).withOpacity(0.2),
-      unselectedItemColor: Colors.white,
-      selectedItemColor: Colors.white,
-      showSelectedLabels: false,
-      showUnselectedLabels: false,
-      items: [
-        bottomNavigationBarItem,
-        const BottomNavigationBarItem(
-          icon: Icon(Icons.favorite_outline),
-          label: 'Favorites',
-        ),
-        const BottomNavigationBarItem(
-          icon: Icon(Icons.play_circle_outline),
-          label: 'Play',
-        ),
-        const BottomNavigationBarItem(
-          icon: Icon(Icons.people_outline),
-          label: 'Profile',
-        ),
-      ],
-    );
+  Widget build(Object context) {
+    // TODO: implement build
+    throw UnimplementedError();
   }
 }
 

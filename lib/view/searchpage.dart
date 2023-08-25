@@ -91,7 +91,7 @@ class _SearchPageState extends State<SearchPage> {
                 // Display the generated URL
                 Text(
                   _generatedUrl,
-                  style: TextStyle(fontSize: 16),
+                  style: TextStyle(fontSize: 16, color: Colors.white),
                 ),
               ],
             ),
